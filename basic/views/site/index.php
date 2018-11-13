@@ -2,14 +2,14 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = '少儿编程平台';
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
+        <h2>Let's explore the programming world!</h2>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+        <p class="lead">欢迎来到少儿编程平台!</p>
 
         <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
     </div>
