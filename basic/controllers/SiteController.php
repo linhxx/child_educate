@@ -10,7 +10,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 
-class SiteController extends Controller
+class SiteController extends BaseController
 {
     /**
      * {@inheritdoc}
@@ -96,6 +96,23 @@ class SiteController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+
+    /**
+     * Logout action.
+     *
+     * @return Response
+     */
+    public function actionTestcurl()
+    {
+        //$cmd = 'curl http://39.105.213.219:8990/api/v1/account/check';
+        //exec($cmd, $res);
+        $url = 'http://39.105.213.219:8990/api/v1/account/check';
+        $strData = json_encode(array('test'=>'a'));
+        $res = $this->sendHttpRequest($url, $strData, 'POST');
+        return $this->render('test', [
+            'res' => $res,
+        ]);
     }
 
     /**
